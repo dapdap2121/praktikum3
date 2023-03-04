@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>Kalkulator Sederhana</title>
+        <link rel="stylesheet" href="style2.css">
+    </head>
+    <script languange="Javascript">
+        function klikTambah() {
+            document.kirim.hasil.value = parseInt(document.kirim.text1.value) + parseInt(document.kirim.text2.value);
+        }
+
+        function klikKurang() {
+            document.kirim.hasil.value = parseInt(document.kirim.text1.value) - parseInt(document.kirim.text2.value);
+        }
+
+        function klikKali() {
+            document.kirim.hasil.value = parseInt(document.kirim.text1.value) * parseInt(document.kirim.text2.value);
+        }
+
+        function klikBagi() {
+            document.kirim.hasil.value = parseInt(document.kirim.text1.value) / parseInt(document.kirim.text2.value);
+        }
+    </script>
+    <body>
+        <!--tampilan form kalkulator sederhana-->
+        <div class="center">
+            <h1>Kalkulator Sederhana</h1>
+            <form method="post" name="kirim">
+                <div>
+                    <label> Bilangan Pertama : </label>
+                    <input type="text" name="text1" required>
+                </div>
+                <br>
+                <div>
+                    <label> Bilangan Kedua : </label>
+                    <input type="text" name="text2" required>
+                </div>
+                <br>
+                <div>
+                    <label> Hasil : </label>
+                    <input type="text" name="hasil" disabled>
+                </div>
+                <br>
+                <div>
+                    <input type="button" value="+" name="tambah" onclick= klikTambah()>
+                    <input type="button" value="-" name="kurang" onclick= klikKurang()>
+                    <input type="button" value="x" name="kali" onclick= klikKali()>
+                    <input type="button" value="/" name="bagi" onclick= klikBagi()>
+                </div>
+            </form>
+        </div>
+        <!--tampilan tulisan terakhir dimodifikasi-->
+        <div class="modif">
+            <script language="Javascript">
+                document.write("Dimodifikasi terakhir pada " + document.lastModified)
+            </script>
+        </div>
+    </body>
+</html>
